@@ -1,6 +1,6 @@
 # CockroachDB  - Terraform Managed Google GKE Single-region Database
 
-This repo is the Terraform code to deploy a single CockroachDB Cluster into a AKS cluster into one region.
+This repo is the Terraform code to deploy a single CockroachDB Cluster into a GKE cluster into one region.
 
 1. Login in to Google Cloud from the CLI with the `gcloud auth` command.
 
@@ -39,7 +39,7 @@ terraform plan
 terraform apply --auto-approve
 ```
 
-6. When you have deployed your infrastructure you can add the three AKS clusters to your local `KUBECONFIG` file. Once you have done this you will be able to communicate with your clusters via `kubectl`
+6. When you have deployed your infrastructure you can add the GKE cluster to your local `KUBECONFIG` file. Once you have done this you will be able to communicate with your cluster via `kubectl`
 
 ```
 gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region) --project {your_project_name}
