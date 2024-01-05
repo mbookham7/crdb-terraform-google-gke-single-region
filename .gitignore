@@ -33,3 +33,4 @@ override.tf.json
 /my-safe-directory
 /europe-west2-a
 .terraform.*
+/.vscode/*
